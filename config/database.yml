@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: bitnami_redmine
   username: root
   password: admin123
