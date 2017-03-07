@@ -1,0 +1,30 @@
+
+
+<%#=if @photo.image.url.include? "original"  %>
+
+
+<%#= image_tag @photo.image.url.to_s, :class => "img-thumbnail" , size: "360" %>
+<%#= "cool"  %>
+<!-- <div>
+ <p class="bg-success"> The photo was added! Your video id is <mark><%= @photo.id   %></mark>. Please update the video id in the details. </p>
+ </div> -->
+ <%#= @photo.image.url %>
+<%= video_player({:file => @photo.image.url}, width: 980, height: 580) %>
+<br/>
+<br/>
+
+<!-- <div class="col-xs-6">
+
+<h3 class="text-warning">
+<%#= "Other Videos Uploaded By #{@photo.author}"  %>
+</h3>
+</div>
+<br/>
+
+<br/>
+<br/>
+<%#@videos.each do |v|%>
+
+
+<%#= link_to image_tag(v.image.url(:thumb), class: 'col-md-1 img-circle' ),{:action => 'project_content', :projectname => v.projectname,:username=>v.author} %>
+<%#end%> -->
