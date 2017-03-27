@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
   def create
   	@photo = Photo.new(photo_params)
     @name = @photo.author
-    count = Photo.find_by_sql("SELECT MAX(id) FROM Photos")
+    #count = Photo.find_by_sql("SELECT MAX(id) FROM Photos")
     
     id = User.find_by_sql("select id from users where login='#{@name}'")
     if id.any?
@@ -21,7 +21,6 @@ class PhotosController < ApplicationController
   		render 'new'
     end
     else
-0
       flash[:success] = "Please enter the SPC Login Name!" # red notice to be implemented
       render 'new'
       end

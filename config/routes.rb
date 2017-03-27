@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'access/login'
 
-  get 'access/attempt_login'
 
   get 'photos/new'
 
@@ -11,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :photos, only: [:new, :create, :index, :destroy]
 
-  root "photos#index"
+  root "photos#new"
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
 
